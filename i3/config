@@ -54,6 +54,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Use playerctl to play-pause media
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Use xbacklight to change backlight
 #bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
