@@ -1,5 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export --path FONTCONFIG_PATH:/etc/fonts
+SETUVAR --export LIBGL:debug
+SETUVAR --export LIBVA_DRIVER_NAME:nvidia
+SETUVAR --export MOZ_DISABLE_RDD_SANDBOX:1
+SETUVAR --export MOZ_X11_EGL:1
+SETUVAR --export NVD_BACKEND:direct
+SETUVAR --export NVD_LOG:1
+SETUVAR --export THEME_DIR:/usr/share/themes/Catppuccin\x2dMocha\x2dStandard\x2dGreen\x2dDark
+SETUVAR --export VK_LOADER_DEBUG:1
+SETUVAR --export __EGL_VENDOR_LIBRARY_FILENAMES:/usr/share/glvnd/egl_vendor\x2ed/10_nvidia\x2ejson
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

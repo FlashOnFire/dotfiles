@@ -11,4 +11,7 @@ if status is-interactive
     alias rbt="sudo rfkill block bluetooth;sudo rfkill unblock bluetooth;sudo systemctl restart bluetooth.service"
 
     alias n="nmcli"
+    alias la="ls -la"
+    nvm use 19.3.0 --silent
 end
+export PATH="$HOME/.local/bin/:$PATH"

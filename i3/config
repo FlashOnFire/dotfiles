@@ -24,12 +24,14 @@ font pango:Bahnschrift 9
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+exec_always --no-startup-id $HOME/.config/picom/launch.sh
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- rlock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- rlock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -214,8 +216,6 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # disable focus change on mouse movement
 # focus_follows_mouse no
 
@@ -223,7 +223,25 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 for_window [class="^.*"] border none
 
 # set wallpaper
-exec --no-startup-id nitrogen --restore
+
+exec_always --no-startup-id autorandr --load work
+exec_always --no-startup-id nitrogen --restore
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # exec --no-startup-id ~/Documents/git_repos/linux-wallpaperengine/build/wallengine --screen-root DVI-D-0 --screen-root DisplayPort-0 --screen-root HDMI-A-0 1743661546
 
 exec --no-startup-id jetbrains-toolbox --minimize
+exec_always xset r rate 200 40
+exec solaar -w hide
+
+workspace 1 output DP-3
+workspace 2 output DP-0
+workspace 3 output HDMI-0
+
+bindsym $mod+U move workspace to output left
+bindsym $mod+I move workspace to output right
+
+bindsym --release $mod+m exec --no-startup-id ~/macro.sh
+
+#exec imwheel
