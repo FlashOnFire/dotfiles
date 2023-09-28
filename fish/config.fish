@@ -13,5 +13,17 @@ if status is-interactive
     alias n="nmcli"
     alias la="ls -la"
     nvm use 19.3.0 --silent
+
+    zoxide init fish | source
 end
-export PATH="$HOME/.local/bin/:$PATH"
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.local/bin/
+fish_add_path /opt/android-sdk
+
+set -x ANDROID_SDK_ROOT /opt/android-sdk
+fish_add_path $ANDROID_SDK_ROOT/platform-tools/
+fish_add_path $ANDROID_SDK_ROOT/tools/bin/
+fish_add_path $ANDROID_ROOT/emulator
+fish_add_path $ANDROID_SDK_ROOT/tools/
+fish_add_path $HOME/.pub-cache/bin
+fish_add_path /opt/flutter/bin

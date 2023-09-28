@@ -1,14 +1,19 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export 1:0
+SETUVAR --export ANDROID_SDK_ROOT:/opt/android\x2dsdk
+SETUVAR --export BRIDGE_LOCATION:/home/flashonfire/\x2elocal/share/leagueoflegends/bridge
+SETUVAR --export DEBUGINFOD_URLS:https\x3a//debuginfod\x2earchlinux\x2eorg
+SETUVAR --export EDITOR:nano
 SETUVAR --export --path FONTCONFIG_PATH:/etc/fonts
+SETUVAR --export --path LD_LIBRARY_PATH:/opt/steamworks\x2dsdk/redistributable_bin/linux64/
 SETUVAR --export LIBGL:debug
-SETUVAR --export LIBVA_DRIVER_NAME:nvidia
 SETUVAR --export MOZ_DISABLE_RDD_SANDBOX:1
 SETUVAR --export MOZ_X11_EGL:1
-SETUVAR --export NVD_BACKEND:direct
 SETUVAR --export NVD_LOG:1
 SETUVAR --export THEME_DIR:/usr/share/themes/Catppuccin\x2dMocha\x2dStandard\x2dGreen\x2dDark
 SETUVAR --export VK_LOADER_DEBUG:1
+SETUVAR --export WLR_NO_HARDWARE_CURSORS:1
 SETUVAR --export __EGL_VENDOR_LIBRARY_FILENAMES:/usr/share/glvnd/egl_vendor\x2ed/10_nvidia\x2ejson
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
@@ -40,3 +45,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:cyan\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/opt/flutter/bin\x1e/home/flashonfire/\x2epub\x2dcache/bin\x1e/opt/android\x2dsdk/tools\x1e/opt/android\x2dsdk/tools/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk
